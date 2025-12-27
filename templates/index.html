@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Internship Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 Smart Internship Portal</h1>
+    <p>Enter your skills to get the best internship recommendations</p>
+
+    <form action="/recommend" method="post">
+        <input type="text" name="skills" placeholder="e.g. python sql data analysis" required>
+        <br>
+        <button type="submit">🔍 Get Recommendations</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Internships</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>✅ Recommended Internships</h2>
+
+    <ul>
+        {% for internship in internships %}
+        <li>
+            <a href="/details/{{ internship }}">{{ internship }}</a>
+        </li>
+            
+        {% endfor %}
+    </ul>
+
+    <a href="/">⬅ Go Back</a>
+</div>
+
+</body>
+</html>

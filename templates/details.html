@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ internship }} Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>📌 {{ internship }}</h2>
+
+    {% if info %}
+        <p><b>Description:</b> {{ info.description }}</p>
+        <p><b>Required Skills:</b> {{ info.skills }}</p>
+        <p><b>Tools Used:</b> {{ info.tools | safe }}</p>
+        <p><b>Career Scope:</b> {{ info.scope }}</p>
+        <p><b>Job Roles:</b>{{info["Job Roles"] | safe}}</p>
+         <p><b>Average Salary (India – Approx.):</b><br>
+           {{ info["Average Salary (India – Approx.)"] | safe }}
+        </p>
+    {% else %}
+        <p>Details not available.</p>
+    {% endif %}
+
+    <a href="/">⬅ Home</a>
+</div>
+
+</body>
+</html>
